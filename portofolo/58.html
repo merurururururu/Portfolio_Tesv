@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>58</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Libre+Barcode+39&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Link to the JavaScript file -->
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #fefefe;
+            --light-color: #ecf0f1;
+            --dark-color: #34495e;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body {
+            background-color: #f5f5f5;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+        .portfolio-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .portfolio-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px; /* Optional cap to avoid huge images */
+            object-fit: contain;
+            display: block;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+        .portfolio-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+        .portfolio-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1000;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: white;
+            width: 80%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 8px;
+            position: relative;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+        }
+        .modal-img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        .modal-text h2 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        .modal-text p {
+            margin-bottom: 1rem;
+        }
+        .modal-links {
+            margin-top: 1.5rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 768px) {
+            .modal-content {
+                grid-template-columns: 1fr;
+                width: 95%;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="C:\Users\alexa\OneDrive\Desktop\project_vs\portofolo\assets\SU_MP_Assets\logo\5copy.png" alt="Your Logo" />
+        </div>
+        <div class="scrolling-banner">
+            <div class="scrolling-text doto-custom">
+                <span>58 Seconds Away From Iconic Ideas. - Scroll to Explore, Stay to Be Inspired...</span> 
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+         <section id="about">
+             <div class="about-content">
+                <div class="about-text">
+                     <h2>About Me</h2>
+                     <p>
+                         I am a passionate Student of life with experience in creating visually appealing designs 
+                        for various platforms. My work focuses on blending creativity with functionality, ensuring 
+                         that each design not only looks good but also serves its purpose effectively. 
+                         I love exploring new design trends and techniques to continually enhance my skills.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <img src="C:\Users\alexa\OneDrive\Desktop\portofolo\assets\SU_MP_Assets\abt_1 (2).jpg" alt="About Me">
+                </div>
+            </div>
+        </section>
+
+    <section id="gallery">
+        <h2>My Work</h2>
+
+        <div class="legend">
+            <button onclick="filterProjects('all')"><span class="tag all"></span>All</button>
+            <button onclick="filterProjects('python')"><span class="tag python"></span>Python</button>
+            <button onclick="filterProjects('html')"><span class="tag html"></span>HTML</button>
+            <button onclick="filterProjects('sql')"><span class="tag sql"></span>SQL</button>
+            <button onclick="filterProjects('gamedev')"><span class="tag gamedev"></span>GameDev</button>
+            <button onclick="filterProjects('graphic')"><span class="tag graphic"></span>Graphic Design</button>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- Example Projects -->
+            <a href="C:\Users\alexa\OneDrive\Desktop\project_vs\portofolo\Projects\Python\project-guess.html" class="gallery-item python gamedev">
+                <img src="https://cdn-icons-png.flaticon.com/512/2894/2894410.png" alt="Number Guessing Game" class="portfolio-img" />
+                <div class="gallery-info">
+                    <h3>Number Guessing Game</h3>
+                    <div class="project-tags">
+                        <span class="tag-badge python">Python</span>
+                        <span class="tag-badge gamedev">GameDev</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="C:\Users\alexa\OneDrive\Desktop\project_vs\portofolo\Projects\Python\project-currency.html" class="gallery-item python">
+                <img src="https://cdn-icons-png.flaticon.com/512/833/833470.png" alt="Currency Converter" class="portfolio-img" />
+                <div class="gallery-info">
+                    <h3>Currency Converter</h3>
+                    <div class="project-tags">
+                        <span class="tag-badge python">Python</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="C:\Users\alexa\OneDrive\Desktop\project_vs\portofolo\Projects\Python\project-todo.html" class="gallery-item python">
+                <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="To-Do List App" class="portfolio-img" />
+                <div class="gallery-info">
+                    <h3>To-Do List App</h3>
+                    <div class="project-tags">
+                        <span class="tag-badge python">Python</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="C:\Users\alexa\OneDrive\Desktop\project_vs\portofolo\Projects\HTML\interactable-resume(landing).html" class="gallery-item html">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML Project" class="portfolio-img" />
+                <div class="gallery-info">
+                    <h3>Interactive Resume</h3>
+                    <div class="project-tags">
+                        <span class="tag-badge html">HTML</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="gallery-item sql">
+                <img src="https://cdn-icons-png.flaticon.com/512/2772/2772165.png" alt="SQL Project" class="portfolio-img" />
+                <div class="gallery-info">
+                    <h3>Database Management</h3>
+                    <div class="project-tags">
+                        <span class="tag-badge sql">SQL</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="gallery-item gamedev">
+                <img src="https://cdn-icons-png.flaticon.com/512/753/753318.png" alt="GameDev Project" class="portfolio-img" />
+                <div class="gallery-info">
+                    <h3>2D Platformer Game</h3>
+                    <div class="project-tags">
+                        <span class="tag-badge gamedev">GameDev</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="gallery-item graphic">
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Graphic Design" class="portfolio-img" />
+                <div class="gallery-info">
+                    <h3>Album Cover Series</h3>
+                    <div class="project-tags">
+                        <span class="tag-badge graphic">Graphic Design</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label>Name:</label><input type="text" required />
+            <label>Email:</label><input type="email" required />
+            <label>Message:</label><textarea required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 58 Portfolio</p>
+</footer>
+
+<script>
+// Filter function
+function filterProjects(tag) {
+    const items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+        if (tag === 'all' || item.classList.contains(tag)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+</script>
+
+</body>
+</html>

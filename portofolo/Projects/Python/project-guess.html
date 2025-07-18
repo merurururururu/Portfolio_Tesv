@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guessing Game | 58</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Libre+Barcode+39&family=Rubik+Mono+One&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+
+  <style>
+    body {
+      background-color: #f5f5f5;
+      color: #34495e;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #fefefe;
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2b2b2b;
+      font-weight: bold;
+    }
+
+    .scrolling-banner {
+      background-color: #2b2b2b;
+      padding: 5px;
+      overflow: hidden;
+    }
+
+    .scrolling-text {
+      font-family: 'Doto', sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      white-space: nowrap;
+      animation: scroll 10s linear infinite;
+      color: #fff;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .project-hero {
+      text-align: center;
+    }
+
+    .project-hero img {
+      max-width: 300px;
+      margin: 20px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2b2b2b;
+      color: #fff;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="C:\Users\alexa\OneDrive\Desktop\project_vs\portofolo\assets\SU_MP_Assets\logo\5copy.png" alt="58 Logo" />
+    </div>
+    <div class="scrolling-banner">
+      <div class="scrolling-text doto-custom">
+        <span>58 Seconds Away From Iconic Ideas. - Scroll to Explore, Stay to Be Inspired..</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="58.html#about">About</a></li>
+        <li><a href="58.html#gallery">Gallery</a></li>
+        <li><a href="58.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header>
+    <h1>Project Guess</h1>
+    <a href="C:\Users\alexa\OneDrive\Desktop\project_vs\portofolo\58.html">← Back to Portfolio</a>
+</header>
+
+  <main>
+    <section class="project-hero">
+      <h1>Number Guessing Game</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/2894/2894410.png" alt="Number Guessing Game" />
+    </section>
+
+    <section>
+      <h2>Project Overview</h2>
+      <p>This is a beginner-friendly Python project using <strong>Tkinter</strong>. This was one of my first coding projects a simple game where the user guesses a randomized number within a specific range. The game provides feedback on whether the guess is too high or too low, guiding the player until they find the correct answer.</p>
+
+      <h3>Key Features:</h3>
+      <ul>
+        <li>Random number generation (1–100)</li>
+        <li>Live feedback (too high / too low)</li>
+        <li>GUI with Entry boxes and Buttons</li>
+        <li>Attempt counter</li>
+      </ul>
+
+      <h3>Technologies Used:</h3>
+      <p>Python, Tkinter</p>
+
+      <h3>What I Learnt:</h3>
+      <ul>
+        <li><strong>Core Programming Concepts</strong>: Practiced variables, loops, conditionals, and input handling, reinforcing the foundations of programming logic.</li>
+        <li><strong>Randomization</strong>: Learned how to use random number generation to create unpredictability and replayability in games.</li>
+        <li><strong>User Interaction</strong>: Gained experience designing basic user interaction systems through console inputs and real-time feedback.</li>
+        <li><strong>Debugging and Problem Solving</strong>: Built the habit of testing, identifying errors, and iterating to improve the user experience.</li>
+      </ul>
+      <h3>Future Improvements:</h3>
+      <ul>
+        <li>Rebuild the game using a better graphical user interface to make it more engaging and user-friendly.</li>
+        <li>Add difficulty levels (easy, medium, hard) to adjust the range of numbers and number of attempts.</li>
+        <li>Store high scores or best performances locally (e.g., in a text file or database) to encourage replayability.</li>
+        <li>Implement a timer to add a competitive element, challenging players to guess the number within a time limit.</li>
+        <li>Enhance the visual design with better graphics, animations, and sound effects to create a more immersive experience.</li>
+        <li>Add a give up or quit button to end the game early.</li>
+      </ul>
+
+      <a href="#" class="btn">View Source Code</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 58 Portfolio</p>
+  </footer>
+</body>
+</html>
