@@ -144,11 +144,17 @@
 </header>
 
 <main>
-    <img src="https://cdn-icons-png.flaticon.com/512/833/833470.png" alt="Currency App" style="width:200px; display:block; margin:auto;">
+    <img src="assets/Currency/2.png" alt="Currency Converter" class="portfolio-img" alt="Currency App" style="width:200px; display:block; margin:auto;">
 
     <section>
         <h2>Project Overview</h2>
-        <p>This is a Python-based currency converter using <strong>Kivy</strong> for the interface and the <strong>ExchangeRate-API</strong> for real-time data.</p>
+        <p>This project is a simple, interactive currency converter app built using Kivy for the GUI and the ExchangeRate-API for real-time currency rates. The app allows users to input:</p>
+        <ul>
+            <li>a base currency</li>
+            <li>an amount to convert</li>
+            <li>a list of target currency</li>
+        </ul>
+        <p>It then outputs the converted amounts and also displays the top 5 most valuable currencies relative to the base.</p>
 
         <h3>Key Features:</h3>
         <ul>
@@ -160,8 +166,34 @@
         </ul>
 
         <h3>Technologies Used:</h3>
-        <p>Python, Kivy, REST API (ExchangeRate-API)</p>
+        <p>Python, Kivy, Requests, REST API (ExchangeRate-API)</p>
 
+        <h3>What I Learned</h3>
+        <ul>
+            <li>Kivy UI Design: Gained hands-on experience with BoxLayout, ScrollView, TextInput, Button, and Label widgets.</li>
+            <li>Working with APIs: Learned how to make HTTP requests and parse JSON data in Python.</li>
+            <li>Data Filtering and Formatting: Practiced converting and formatting numerical data for user display.</li>
+            <li>Error Handling: Implemented defensive programming to catch and display input errors and API issues.</li>
+        </ul>
+
+        <h3>Known Flaws / Limitations</h3>
+        <ul>
+            <li>API Dependency: Requires a stable internet connection and an API key with valid quota.</li>
+            <li>Basic UI Design: Functional but minimal visual customization—could benefit from better styling and animations.</li>
+            <li>No Offline Mode: App doesn't cache previous rates, so it can't be used offline.</li>
+            <li>No Input Suggestions: Users must manually type currency codes; there's no dropdown or autocomplete.</li>
+        </ul>
+
+        <h3>Future Improvements</h3>
+        <ul>
+            <li>Better UI/UX Design: Add icons, color themes, and animations for a more polished interface.</li>
+            <li>Autocomplete for Currency Codes: Reduce errors by letting users select currencies from a predefined list.</li>
+            <li>Historical Data: Implement a feature to show currency trends or past rates.</li>
+            <li>Currency Flags or Icons: Visual enhancement to make the app more intuitive.</li>
+            <li>Export to CSV or PDF: Allow users to save their conversions</li>
+            <li>Dark Mode / Light Mode Toggle: Improve accessibility and visual appeal.</li>
+            <li>Multi-Language Support: Expand usability for non-English speakers.</li>
+        </ul>
         <a href="#" class="btn">View Source Code</a>
     </section>
 </main>
